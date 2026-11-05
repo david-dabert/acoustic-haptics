@@ -1,0 +1,46 @@
+{
+  "name": "acoustic-haptics",
+  "version": "1.0.0",
+  "description": "Missing-fundamental psychoacoustic sub-bass & noise-penetrating transient cue engine for Web Audio API.",
+  "keywords": [
+    "web-audio",
+    "psychoacoustics",
+    "missing-fundamental",
+    "haptics",
+    "audio-cues",
+    "gym-audio",
+    "sound-synthesis"
+  ],
+  "author": "David Dabert <https://github.com/david-dabert>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/david-dabert/acoustic-haptics.git"
+  },
+  "homepage": "https://github.com/david-dabert/acoustic-haptics#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
